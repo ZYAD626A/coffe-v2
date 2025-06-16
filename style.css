@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --chocolate1:rgba(210, 138, 30, 0.932);
+    --chocolate:chocolate;
+
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+body{
+ background: whitesmoke;
+ 
+ }
+header {
+    width: 100%;
+    position: fixed;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s ease;
+}
+ header.header_scroll{
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.8);
+        z-index: 1000;
+ }
+
+ ul {
+    display: flex;
+    gap:15px;
+}
+ul li{
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+}
+ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+ul li a:hover{
+    color:var(--chocolate);
+}
+.title h3{
+    color: whitesmoke;
+    font-size: 30px;
+}
+header.header_scroll ul li a ,.title h3{
+    color: #fff;
+}
+.title h3 span{
+    color: var(--chocolate1);
+}
+header.header_scroll ul li a:hover{
+        color: var(--chocolate1);
+}
+
+    /*work in container for video */
+main{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.container{
+width: 100%;
+max-height: 100vh;
+overflow: hidden;
+overflow: hidden;
+position: relative;
+}
+.container video{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    position: relative;
+    object-fit: cover;
+}
+.titleWeb{
+    position: absolute;
+    top: 65%;
+    left:0;
+    transform: translate(0% , -60%);
+    color: whitesmoke;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s ease;
+}
+.titleWeb .left{
+    width: 50%;
+    opacity: 0.2;
+    transition: 5s ease;
+}
+.titleWeb h1{
+    color: wheat;
+    font-size: 45px;
+    width: 200px;
+}
+.titleWeb p{
+    margin-top: 30px;
+    width: 50%;
+    color: rgb(229, 220, 220);
+}
+.btn{
+    margin-top: 40px;
+    width: 50%; 
+}
+.btn button{
+    width: 120px;
+    padding: 5px 0;
+    background: none;
+    outline: none;
+    border: 3px double wheat;
+    color: wheat;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn button:hover{
+transform: scale(1.1);
+background: wheat;
+color: #222;
+}
+.titleWeb .right{
+    width: 50%;
+    display: flex;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: right;
+    gap:13px;
+    opacity: 0.2;
+    transition: 5s ease;
+}
+.right h3{
+    width: 40px;
+    line-height: 25px;
+    color: whitesmoke;
+}
+.right i{
+    font-size: 18px;
+    color: wheat;
+}
+.allProducts{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: auto;
+ 
+}
+.allProducts .head{
+    width: 100%;
+    margin:40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.allProducts .head hr{
+width: 90%;
+}
+.allProducts .head h3{
+    font-size: 40px;
+    font-family:  cursive;
+    color: rgb(244, 159, 0);
+}
+.allProducts .head ul{
+    display: flex;
+    gap: 25px;
+}
+.allProducts .head ul li {
+    font-size: 18px;
+    font-weight: 500;
+}
+.allProducts .head ul li a{
+    color: #444;
+}
+.allProducts .head ul li a:hover{
+    color: red;
+}
+.allProducts .boxCard{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.allProducts .boxCard .card{
+    width: 20%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    box-shadow: 0 0 10px gray;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+    flex-shrink: 0;
+    background: white;
+}
+.allProducts .boxCard .card:hover{
+    transform:scale(1.05);
+ 
+}
+.allProducts .boxCard .card .image{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+.allProducts .boxCard .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+.allProducts .boxCard .card .image img:hover{
+    transform: scale(1.1);
+}
+.allProducts .boxCard .card .bottomcard{
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+}
+.allProducts .boxCard .card .bottomcard .price{
+    color: green;
+    margin: 5px;
+    font-size: 17px;
+}
+.allProducts .boxCard .card .bottomcard .buy{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.allProducts .boxCard .card .bottomcard .buy h4{
+color:#333;
+}
+.allProducts .boxCard .card .bottomcard .buy button{
+    width: 70px;
+    padding: 5px 0;
+    background: none;
+    outline: none;
+    border: 3px double darkorange;
+    color: darkorange;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.allProducts .boxCard .card .bottomcard .buy button:hover{
+    background: darkorange;
+ 
+    color: whitesmoke;
+    border-radius: 2px;
+    box-shadow: 0 0 8px gray;
+}
+/*work in section for descount */
+.discount{
+    width: 100%;
+    height: 400px;
+    background: url(images/back1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discount h3{
+    width: 200px;
+    color: maroon;
+    margin: 30px 0;
+     font-size: 30px;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    line-height: 40px;
+}
+.discount p{
+    width: 300px;
+    text-align: center;
+    margin-top: 10px;
+}
+.discount button{
+margin-top: 50px;
+width: 120px;
+padding: 9px 0;
+background: maroon;
+color: white;
+border-radius: 4px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: 0.4s ease;
+transform: scale(1.1);
+box-shadow: 10px 5px 30px maroon;
+}
+.discount button:hover{
+box-shadow:  0 0 0px; 
+}
+/*  <!-- work in section for About Us -->*/
+
+.aboutUS{
+    width: 100%;
+    height: 400px;
+    background: url(images/back2.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUS h3{
+ 
+    color: maroon;
+    margin: 30px 0;
+     font-size: 30px;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    line-height: 40px;
+}
+.aboutUS p{
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+    color: silver;
+}
+.aboutUS button{
+margin-top: 60px;
+width: 120px;
+padding: 9px 0;
+background: maroon;
+color: white;
+border-radius: 4px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: 0.4s ease;
+transform: scale(1.1);
+box-shadow: 10px 5px 30px maroon;
+}
+.aboutUS button:hover{
+box-shadow:  0 0 0px; 
+}
+.featured{
+    width: 100%;
+}
+.featured h3{
+    color: #111;
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+.featured .allcard{
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+.featured .card{
+    width: 25%;
+    height: 350px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    flex-shrink: 0;
+}
+.featured .card:hover{
+    transform: scale(1.1);
+    margin: 0 10px;
+}
+.featured .card .image{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.featured .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.featured .card p{
+    color: #111;
+    font-size: 17px;
+    padding: 10px 0;
+    color: var(--chocolate);
+    font-weight: 400;
+}
+/*footer web*/
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: url(images/back2.jpg)no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    
+}
+footer .upperFooter{
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ /*dont forget add border-bottom*/
+}
+footer .upperFooter .right {
+    display: flex;
+    width: 50%;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer .upperFooter .right span{
+color: wheat;
+font-size:18px;
+ font-family: "Edu NSW ACT Hand Pre", cursive;
+ margin-right: 8px;
+}
+
+footer .upperFooter .right ul{
+display: flex;
+gap: 15px;
+}
+
+footer .upperFooter .right ul li{
+cursor: pointer;
+transition: 0.4s ease;
+}
+footer .upperFooter .right ul li:hover{
+    transform: scale(1.4);
+}
+footer .upperFooter .right ul li a i{
+font-size: 20px;
+}
+footer .upperFooter .left{
+    width: 50%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+footer .upperFooter .left img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: center;
+}
+footer .upperFooter .left h3{
+    color: wheat;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+.centerFooter{
+    width: 100%;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.centerFooter .right{
+ width:40%;
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+ align-items: center;
+ justify-content: flex-end;
+ 
+}
+.centerFooter .right h1{
+    font-family: sans-serif;
+    font-size: 25px;
+    color: wheat;
+    text-align: center;
+ 
+}
+.centerFooter .right .card{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    align-content: center;
+    width: 30%;
+    height: 130px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+.centerFooter .right .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.centerFooter .right .card:hover{
+    transform: scale(1.1);
+}
+.centerFooter .left{
+    display: flex;
+    justify-content: flex-start;
+    gap:0px;
+    width: 50%;
+}
+.centerFooter .left div{
+    width: 30%;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+.centerFooter .left div h6{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.scrollUp{
+    position: fixed;
+    top:93%;
+    right:-100%;
+    transform: translate(-3% , -93%);
+    transition: 0.4s ease;
+    cursor: pointer;
+    font-size: 40px;
+    color: maroon;
+    z-index: 1;
+}
+.scrollUp:hover{
+    top: 92%;
+}
+
+
+/* From Uiverse.io by csemszepp */ 
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --hue: 220deg;
+  --width: 15rem;
+  --accent-hue: 22deg;
+  --duration: 0.6s;
+  --easing: cubic-bezier(1, 0, 1, 1);
+}
+
+.togglesw {
+  display: none;
+}
+
+.switch {
+  --shadow-offset: calc(var(--width) / 20);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: var(--width);
+  height: calc(var(--width) / 2.5);
+  border-radius: var(--width);
+  box-shadow: inset 10px 10px 10px hsl(var(--hue) 20% 80%),
+    inset -10px -10px 10px hsl(var(--hue) 20% 93%);
+}
+
+.indicator {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  transition: all var(--duration) var(--easing);
+  box-shadow: inset 0 0 2px hsl(var(--hue) 20% 15% / 60%),
+    inset 0 0 3px 2px hsl(var(--hue) 20% 15% / 60%),
+    inset 0 0 5px 2px hsl(var(--hue) 20% 45% / 60%);
+}
+
+.indicator.left {
+  --hue: var(--accent-hue);
+  overflow: hidden;
+  left: 10%;
+  border-radius: 100px 0 0 100px;
+  background: linear-gradient(180deg, hsl(calc(var(--accent-hue) + 20deg) 95% 80%) 10%, hsl(calc(var(--accent-hue) + 20deg) 100% 60%) 30%, hsl(var(--accent-hue) 90% 50%) 60%, hsl(var(--accent-hue) 90% 60%) 75%, hsl(var(--accent-hue) 90% 50%));
+}
+
+.indicator.left::after {
+  content: '';
+  position: absolute;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+
+.indicator.right {
+  right: 10%;
+  border-radius: 0 100px 100px 0;
+  background-image: linear-gradient(180deg, hsl(var(--hue) 20% 95%), hsl(var(--hue) 20% 65%) 60%, hsl(var(--hue) 20% 70%) 70%, hsl(var(--hue) 20% 65%));
+}
+
+.button {
+  position: absolute;
+  z-index: 1;
+  width: 55%;
+  height: 80%;
+  left: 5%;
+  border-radius: 100px;
+  background-image: linear-gradient(160deg, hsl(var(--hue) 20% 95%) 40%, hsl(var(--hue) 20% 65%) 70%);
+  transition: all var(--duration) var(--easing);
+  box-shadow: 2px 2px 3px hsl(var(--hue) 18% 50% / 80%),
+    2px 2px 6px hsl(var(--hue) 18% 50% / 40%),
+    10px 20px 10px hsl(var(--hue) 18% 50% / 40%),
+    20px 30px 30px hsl(var(--hue) 18% 50% / 60%);
+}
+
+.button::before, 
+.button::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  width: 41%;
+  height: 80%;
+  border-radius: 100%;
+}
+
+.button::before {
+  left: 5%;
+  box-shadow: inset 1px 1px 2px hsl(var(--hue) 20% 85%);
+  background-image: linear-gradient(-50deg, hsl(var(--hue) 20% 95%) 20%, hsl(var(--hue) 20% 85%) 80%);
+}
+
+.button::after {
+  right: 5%;
+  box-shadow: inset 1px 1px 3px hsl(var(--hue) 20% 70%);
+  background-image: linear-gradient(-50deg, hsl(var(--hue) 20% 95%) 20%, hsl(var(--hue) 20% 75%) 80%);
+}
+
+.togglesw:checked ~ .button {
+  left: 40%;
+}
+
+.togglesw:not(:checked) ~ .indicator.left,
+.togglesw:checked ~ .indicator.right {
+  box-shadow: inset 0 0 5px hsl(var(--hue) 20% 15% / 100%),
+    inset 20px 20px 10px hsl(var(--hue) 20% 15% / 100%),
+    inset 20px 20px 15px hsl(var(--hue) 20% 45% / 100%);
+}
+
+/*dark mod*/
+ 
+.allProducts .boxCard .card.whiteCard{
+    width: 20%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid #111;
+    box-shadow: 0 0 10px #000;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+    flex-shrink: 0;
+    background:whitesmoke;
+}
+
+
+
+.featured h3.whiteText{
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    margin: 50px 0;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+}

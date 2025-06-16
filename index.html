@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tm Coffe the pest website for buy coffe and breads and cakes etc....">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">    
+    <title>Coffe</title>
+</head>
+<body>
+    <header>
+        
+            <div class="title"><h3>Coffe <span>Tm</span></h3></div>
+            <ul>
+                <li><a href="#"style=" color: var(--chocolate1);">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Coffe</a></li>
+                <li><a onclick="setting()">Settings</a></li>
+            </ul>
+         
+    </header>
+    <main>
+        <div class="container"><!-- position relative -->
+            <video src="videos/2.mp4"loop=""autoplay=""muted=""></video><!-- position relative -->
+            <section class="titleWeb"> <!-- postion absluote -->
+                <div class="left"id='left_home'>
+                <h1>Tm Coffe</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo
+                     obcaecati voluptatem adipisci repellat, excepturi,
+                      alias ad quam totam numquam ratione, vitae suscipit nihil
+                       eos ipsum doloremque perspiciatis corporis vel.
+                </p>
+                <div class="btn"><button>Shop Now</button></div>
+                </div>
+                <div class="right"id='right_home'>
+                  <h3>Cairo 1,2,3</h3>   <i class="fa-solid fa-location-dot"></i> 
+                </div>
+            </section>
+        </div>
+    </main>
+    <section class="allProducts">
+        <div class="head"><h3>Top Products</h3></div>
+        <div class="boxCard">
+
+
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe1.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe2.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe3.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe4.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe5.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/coffe6.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Coffe Tm</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="card">
+                <div class="image">
+                    <img src="images/Crepe.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Crepe</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+        <div class="card">
+                <div class="image">
+                    <img src="images/cake.jpg">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+      
+    </section>
+    <!-- work in section for descount -->
+    <section class="discount">
+        <h3>20% Of Your First Order</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <button>Learn More</button>
+    </section>
+    <!-- section for explore more  -->
+     
+    <section class="allProducts">
+        <div class="head">
+            <h3>Explore More</h3>
+            <ul>
+                <li><a onclick = "changeImg(this)"class="a1">Cake</a></li>
+                <li><a onclick = "changeImg(this)"class="a1" >Breads</a></li>
+                <li><a onclick = "changeImg(this)"class="a1" >Coffe</a></li>
+                <li><a onclick = "changeImg(this)"class="a1" >Crepe</a></li>
+                <li><a onclick = "changeImg(this)"class="a1" >Pizza</a></li>
+            </ul>
+         <hr>
+        </div>
+        <div class="boxCard">
+
+
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake1.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake2.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake3.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake4.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake5.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                
+            <div class="card">
+                <div class="image">
+                    <img src="images/cake56.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="card">
+                <div class="image">
+                    <img src="images/Crepe.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Crepe</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+        <div class="card">
+                <div class="image">
+                    <img src="images/cake.jpg"class="changer">
+                </div>
+                    <div class="bottomcard">
+                        <p class="price">30$</p>
+                        <div class="buy">
+                            <h4>Cake</h4>
+                            <button>Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+      
+    </section>
+
+
+        <!-- work in section for About Us -->
+    <section class="aboutUS">
+        <h3>About Us :</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rerum animi ipsa expedita quaerat suscipit facere dolorum. Dolorum, recusandae asperiores necessitatibus amet ducimus neque laborum, obcaecati, fugit porro et id?
+        </p>
+        <button>Learn More</button>
+    </section>
+    <!-- section for featured treats  -->
+     <section class="featured">
+ 
+           <h3>featured treats</h3>
+ 
+        <div class="allcard">
+            
+        <div class="card">
+            <div class="image"><img src="images/cake2.jpg"></div>
+            <p>Cake</p>
+        </div>
+        
+                <div class="card">
+            <div class="image"><img src="images/cake56.jpg"></div>
+            <p>Cake</p>
+        </div>
+
+                <div class="card">
+            <div class="image"><img src="images/Crepe.jpg"></div>
+            <p>Cake</p>
+        </div>
+        </div>
+     </section>
+     <!-- footer page -->
+      <footer>
+        <div class="upperFooter">
+                 <div class="left">
+                <img src="images/logo.webp"> <h3>Tm Cofe</h3>
+            </div>
+
+            <div class="right">
+             <span>  My Social Media : </span>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+       
+        </div>
+        <div class="centerFooter">
+
+            <div class="left">
+                <div class="l_div">
+                    <h2>About US</h2>
+                    <h6>+20 1165459115</h6>
+                    <h6>Cairo 1,2,3</h6>
+                    <h6>Geza 5,2,4</h6>
+                    <h6>Alx 9,5,1</h6>
+                </div>
+                <div class="r_div">
+                    <h2>Explore</h2>
+                    <h6>Home</h6>
+                    <h6>My Blog</h6>
+                    <h6>My Shop</h6>
+                    <h6>Complaint</h6>
+                </div>
+            </div>
+                
+            <div class="right">
+           
+                
+                <div class="card">
+                    <img src="images/cake56.jpg">
+           
+                </div>
+
+                <div class="card">
+                    <img src="images/cake1.jpg">
+               
+                </div>
+            </div>
+
+        </div>
+      </footer>
+      <!-- scroll up -->
+       <h3 class="scrollUp"><i class="fa-regular fa-circle-up"></i></h3>
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
