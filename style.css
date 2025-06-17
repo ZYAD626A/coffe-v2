@@ -35,6 +35,9 @@ header {
     background: rgba(0,0,0,0.8);
         z-index: 1000;
  }
+ .btnNav{
+    display: none;
+ }
 
  ul {
     display: flex;
@@ -672,4 +675,410 @@ footer .upperFooter .left h3{
     font-size: 40px;
     margin: 50px 0;
     font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+@media screen and (max-width:750px){
+
+header {
+    width: 100%;
+    position: fixed;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s ease;
+}
+ header.header_scroll{
+    padding: 15px 20px;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+ }
+header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top:10%;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    padding-top: 20px;
+    transition: 0.3s ease;
+
+}
+.btnNav{
+display: block;
+}
+header ul li{
+    font-size:23px;
+}
+.btnNav button{
+    border: none;
+    outline: none;
+    background: none;
+    color: whitesmoke;
+    font-size: 25px;
+    cursor: pointer;
+}
+#hide{
+    display: none;
+}
+}
+@media screen and (max-width:600px) {
+.titleWeb{
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50% , -60%);
+    color: whitesmoke;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+    gap: 20px;
+}
+.titleWeb .left{
+    width: 100%;
+    opacity: 0.2;
+    transition: 5s ease;
+    text-align: center;
+}
+.titleWeb h1{
+    color: wheat;
+    width: 100%;
+}
+.titleWeb p{
+    margin-top: 30px;
+    width: 100%;
+    color: rgb(229, 220, 220);
+}
+.btn{
+    margin-top: 40px;
+    width: 100%; 
+}
+.btn button{
+    width: 140px;
+    padding: 8px 0;
+    transition: 0.4s ease;
+}
+.btn button:active{
+transform: scale(1.1);
+}
+.titleWeb .right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+    opacity: 0.2;
+    transition: 5s ease;
+}
+.right h3{
+    width: 100%;
+    line-height: 25px;
+    color: whitesmoke;
+}
+.right i{
+    font-size: 18px;
+    color: wheat;
+}
+.allProducts .head{
+    width: 100%;
+    margin:20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.allProducts .head hr{
+width: 90%;
+ }
+.allProducts .head h3{
+    font-size: 40px;
+    font-family:  cursive;
+    color: rgb(244, 159, 0);
+}
+ 
+.allProducts .boxCard{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.allProducts .boxCard .card{
+    width: 45%;
+    height:150px;
+    border-radius: 10px; 
+    flex-shrink: 0;
+    background: white;
+    position: relative;
+}
+ 
+.allProducts .boxCard .card .image{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}  
+/*work in section for descount */
+.discount{
+    width: 100%;
+    height: 250px;
+    margin-top: 80px;
+}
+.discount h3{
+    width: 200px;
+    color: maroon;
+    margin: 20px 0;
+    line-height: 40px;
+}
+.discount p{
+    color: #111;
+    margin-top: 0px;
+}
+.discount button{
+margin-top: 20px;
+}
+
+/*  <!-- work in section for About Us -->*/
+
+.featured{
+    width: 100%;
+}
+.featured h3{
+    color: #111;
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+.featured .allcard{
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:15px;
+    width:100%;
+}
+.featured .card{
+    width: 40%;
+    height:200px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    flex-shrink: 0;
+}
+/*footer web*/
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: url(images/back2.jpg)no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    
+}
+footer .upperFooter{
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ /*dont forget add border-bottom*/
+}
+footer .upperFooter .right span{
+ display: none;
+}
+footer .upperFooter .right ul li a i{
+font-size: 30px;
+}
+.centerFooter{
+    width: 100%;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerFooter .right{
+display: none;
+ 
+}
+.centerFooter .left{
+    display: flex;
+    justify-content: flex-start;
+    gap:0px;
+    width: 100%;
+}
+.scrollUp{
+    position: fixed;
+    top:93%;
+    right:-100%;
+    transform: translate(-3% , -93%);
+    transition: 0.4s ease;
+    cursor: pointer;
+    font-size: 50px;
+    color: maroon;
+    z-index: 1;
+}
+.scrollUp:hover{
+    top: 92%;
+}
+
+/*  <!-- work in section for About Us -->*/
+
+.aboutUS{
+    width: 100%;
+    height: 250px;
+    flex-direction:column;
+    align-items: center;
+    gap: 0;
+}
+.aboutUS h3{
+    color: maroon;
+    margin: 15px 0;
+}
+.aboutUS p{
+    width: 90%;
+    margin-top:0px;
+}
+.aboutUS button{
+margin-top:20px;
+}
+}
+@media screen and (min-width:751px) and (max-width:900px) {
+.titleWeb{
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50% , -60%);
+    color: whitesmoke;
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+    gap: 20px;
+}
+.titleWeb .left{
+    width: 55%;
+    opacity: 0.2;
+    transition: 5s ease;
+    text-align: center;
+}
+.titleWeb h1{
+    color: wheat;
+    width: 100%;
+}
+.titleWeb p{
+    margin-top: 30px;
+    width: 100%;
+    color: rgb(229, 220, 220);
+    font-size: 19px;
+}
+.btn{
+    margin-top: 40px;
+    width: 100%; 
+}
+.btn button{
+    width: 140px;
+    padding: 8px 0;
+    transition: 0.4s ease;
+}
+.btn button:active{
+transform: scale(1.1);
+}
+.titleWeb .right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+    opacity: 0.2;
+    transition: 5s ease;
+}
+.right h3{
+    width: 100%;
+    line-height: 25px;
+    color: whitesmoke;
+}
+.right i{
+    font-size: 18px;
+    color: wheat;
+}
+.allProducts .head{
+    width: 100%;
+    margin:20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.allProducts .head hr{
+width: 90%;
+ }
+.allProducts .head h3{
+    font-size: 40px;
+    font-family:  cursive;
+    color: rgb(244, 159, 0);
+}
+ 
+.allProducts .boxCard .card{
+    width: 30%;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    box-shadow: 0 0 10px gray;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+    flex-shrink: 0;
+    background: white;
+}
+.allProducts .boxCard .card .bottomcard .price{
+    font-size: 18px;
+}
+.allProducts .boxCard .card .bottomcard .buy{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    align-items: center;
+}
+.allProducts .boxCard .card .bottomcard .buy h4{
+color:#333;
+font-size: 18px;
+}
+/*work in section for descount */
+.discount{
+    width: 100%;
+    height: 300px;
+    background: url(images/back1.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.discount h3{
+    margin: 20px 0;
+}
+/*  <!-- work in section for About Us -->*/
+
+header ul li{
+    font-size:22px;
+}
 }
