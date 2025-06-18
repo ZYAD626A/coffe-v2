@@ -1082,3 +1082,29 @@ header ul li{
     font-size:22px;
 }
 }
+
+/*sweet aret library */
+
+.food{
+width:100%;
+padding:10px 0;
+margin-top:10px;
+display:flex;
+gap: 10px;
+justify-content: center;
+}
+.food h3{
+font-weight: bold;
+font-size: 17px;
+}
+.food span{
+color: green;
+}
+ .img_food{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius: 8px;
+border:6px solid silver;
+box-shadow:0 0 10 gray;
+ }
