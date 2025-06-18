@@ -1,3 +1,16 @@
+let ul = document.querySelector('header ul');
+let show = document.getElementById('show');
+let hide = document.getElementById('hide');
+show.onclick = function(){
+ul.style.left="0%";
+show.style.display = 'none';
+hide.style.display = 'block';
+}
+hide.onclick = function(){
+ul.style.left="-100%";
+show.style.display = 'block';
+hide.style.display = 'none';
+}
 let header = document.querySelector('header');
 let left_home = document.getElementById('left_home');
 let right_home = document.getElementById('right_home');
@@ -26,6 +39,7 @@ titleWeb.style.top="60%"
 }
 
 let img = document.querySelectorAll('.changer');
+let change_foodN = document.querySelectorAll('.change_foodN');
 let cake = ['cake1.jpg','cake2.jpg','cake3.jpg','cake4.jpg','cake5.jpg','cake56.jpg','Crepe.jpg','cake.jpg'];
 let bread = ['https://i.pinimg.com/736x/d6/8f/d3/d68fd3ed9874b7f14356203808f922e0.jpg',
     'https://i.pinimg.com/736x/52/ec/40/52ec40d34e6d082251235c7e002da022.jpg',
@@ -63,22 +77,27 @@ let pizza = ['https://i.pinimg.com/736x/37/b6/60/37b660cb40988dda83c8d345f62c83d
 if(imgSource.innerHTML === "Cake"){
     for(let i = 0; i < cake.length ; i++){
         img[i].src = `images/${cake[i]}`
+        change_foodN[i].innerHTML = "Cake";
     }
 }else if(imgSource.innerHTML === "Breads"){
      for(let i = 0; i < bread.length ; i++){
-        img[i].src = bread[i]
+        img[i].src = bread[i];
+        change_foodN[i].innerHTML = "Breads";
     }   
 }else if(imgSource.innerHTML === "Coffe"){
      for(let i = 0; i < coffe.length ; i++){
         img[i].src = coffe[i]
+        change_foodN[i].innerHTML = "Coffe";
     }    
 }else if(imgSource.innerHTML === "Crepe"){
      for(let i = 0; i < crepe.length ; i++){
         img[i].src = crepe[i]
+        change_foodN[i].innerHTML = "Crepe";
     }
 }else if(imgSource.innerHTML === "Pizza"){
      for(let i = 0; i < pizza.length ; i++){
-        img[i].src = pizza[i]
+        img[i].src = pizza[i];
+        change_foodN[i].innerHTML = "Pizza";
     }   
 }
  }
@@ -89,13 +108,15 @@ if(imgSource.innerHTML === "Cake"){
 function setting(){
 
  Swal.fire({
-  title: 'Hello',
+ 
   text: 'Do you want to change settings',
   confirmButtonText: 'Save',
   showCloseButton: true,
   showCancelButton: true,
   html:`
   <center>
+  <h2>Change Background :</h2>
+  <br><br>
   <!-- From Uiverse.io by csemszepp --> 
 <div class="container1">
 <label class="switch">
@@ -105,6 +126,7 @@ function setting(){
   <div class="button"></div>
 </label>
 </div>
+<br>
   </center>
   `
 });
@@ -141,3 +163,73 @@ checkBox.addEventListener('change', function() {
 document.querySelectorAll("img").forEach(img => {
   img.setAttribute("loading", "lazy");
 });
+let btn_cards = document.querySelectorAll('.card button');
+let allimages = document.querySelectorAll('.card .image img');
+let allPrice = document.querySelectorAll('.card .price');
+let allNameF = document.querySelectorAll('.card .buy h4');
+//console.log(allPrice[1]);
+for(let i = 0;i < 16 ; i++){
+
+btn_cards[i].onclick = function () {
+  Swal.fire({
+    title: `Are you want to buy it ?`,
+    text: "Modal with a custom image.",
+    confirmButtonText: "Buy",
+    cancelButtonText: "Cancel",
+    showCancelButton: true,
+    showCloseButton: true,
+    html: `
+      <img src='${allimages[i].src}' class='img_food'>
+
+      <div class="food">
+        <h3 class="priceFood">Price : <span>${allPrice[i].innerHTML}</span></h3> |
+        <h3 class="nameFood">Food Name : <span>${allNameF[i].innerHTML}</span></h3>
+      </div>
+    `,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        icon: 'success',
+        title: 'true or soon we will get your order',
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
+  });
+}
+
+}
+ 
+if(screen.availWidth < 600){
+ for(let i = 0 ;i < 6 ;i++){
+    allimages[i].onclick = function () {
+        
+          Swal.fire({
+    title: `Are you want to buy it ?`,
+    text: "Modal with a custom image.",
+    confirmButtonText: "Buy",
+    cancelButtonText: "Cancel",
+    showCancelButton: true,
+    showCloseButton: true,
+    html: `
+      <img src='${allimages[i].src}' class='img_food'>
+
+      <div class="food">
+        <h3 class="priceFood">Price : <span>${allPrice[i].innerHTML}</span></h3> |
+        <h3 class="nameFood">Food Name : <span>${allNameF[i].innerHTML}</span></h3>
+      </div>
+    `,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        icon: 'success',
+        title: 'true or soon we will get your order',
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
+  });
+        
+    }
+ }   
+} 
